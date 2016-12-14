@@ -10,7 +10,16 @@
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dist/style.css">
     <script src="data.shoes.js"></script>
+    <script src="js/jrj6out.js"></script>
+    <script>try{Typekit.load({ async: false });}catch(e){}</script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src='js/jquery.min.js'></script>
+    <script src='js/TweenMax.min.js'></script>
+    <script src='js/three.min.js'></script>
+    <script src="js/index.js"></script>
+
     <style>
         body{
             margin: 0;
@@ -322,7 +331,7 @@
             height: 400px;
         }
 
-        #main{width:1024px;height:473px;margin:-100px auto 0 auto;}
+        #main{width:1024px;height:473px;margin:60px auto 0 auto;}
         #main ul{list-style:none;}
         #main ul li{width:200px;height:240px;float:left;position:relative; margin-right: 60px;margin-left: 60px;}
         #main ul li img{border:2px solid #F5F5F5;-webkit-transition:1s ease;-moz-transition:1s ease;-webkit-border-radius: 10px;}
@@ -333,9 +342,228 @@
 
         #main ul li:hover .info{-webkit-transform:rotatey(0deg);-moz-transform:rotatey(0deg);right:30px;bottom:-70px;}
         #main ul li:hover img{-webkit-transform:rotatey(360deg);-moz-transform:rotatey(360deg);}
-        .lanren p { padding: 1em; font-family: monospace; font-size: 2em; }
-        .lanren button { margin: auto; text-align: center; display: block; width: 250px; height: 70px; background: orange; border: 0; cursor: pointer; position: absolute; left: 0; right: 0; border-radius: 3px; font-family: monospace; font-size: 2em; }
-        .lanren article { width: 100%; box-sizing: border-box; }
+
+
+        .intro-container {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-align: center;
+            margin: 0 auto;
+            right: 0;
+            left: 0;
+        }
+
+        h1 {
+            font-family: 'brandon-grotesque', sans-serif;
+            font-weight: bold;
+            margin-top: 0px;
+            margin-bottom: 0;
+            font-size: 20px;
+        }
+        @media screen and (min-width: 860px) {
+            h1 {
+                font-size: 40px;
+                line-height: 52px;
+            }
+        }
+
+        .fancy-text {
+            font-family: "adobe-garamond-pro",sans-serif;
+            font-style: italic;
+            letter-spacing: 1px;
+            margin-bottom: 17px;
+        }
+
+        .button {
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            font-family: 'brandon-grotesque', sans-serif;
+            text-transform: uppercase;
+            min-width: 200px;
+            margin-top: 30px;
+        }
+        .button:hover .border {
+            box-shadow: 0px 0px 10px 0px white;
+        }
+        .button:hover .border .left-plane, .button:hover .border .right-plane {
+            transform: translateX(0%);
+        }
+        .button:hover .text {
+            color: #121212;
+        }
+        .button .border {
+            border: 1px solid white;
+            transform: skewX(-20deg);
+            height: 32px;
+            border-radius: 3px;
+            overflow: hidden;
+            position: relative;
+            transition: .10s ease-out;
+        }
+        .button .border .left-plane, .button .border .right-plane {
+            position: absolute;
+            background: white;
+            height: 32px;
+            width: 100px;
+            transition: .15s ease-out;
+        }
+        .button .border .left-plane {
+            left: 0;
+            transform: translateX(-100%);
+        }
+        .button .border .right-plane {
+            right: 0;
+            transform: translateX(100%);
+        }
+        .button .text {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: .15s ease-out;
+        }
+
+        .x-mark {
+            right: 10px;
+            top: 10px;
+            position: absolute;
+            cursor: pointer;
+            opacity: 0;
+        }
+        .x-mark:hover .right {
+            transform: rotate(-45deg) scaleY(1.2);
+        }
+        .x-mark:hover .left {
+            transform: rotate(45deg) scaleY(1.2);
+        }
+        .x-mark .container {
+            position: relative;
+            width: 20px;
+            height: 20px;
+        }
+        .x-mark .left, .x-mark .right {
+            width: 2px;
+            height: 20px;
+            background: white;
+            position: absolute;
+            border-radius: 3px;
+            transition: .15s ease-out;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+        .x-mark .right {
+            transform: rotate(-45deg);
+        }
+        .x-mark .left {
+            transform: rotate(45deg);
+        }
+
+        .sky-container {
+            position: absolute;
+            color: white;
+            text-transform: uppercase;
+            margin: 0 auto;
+            right: 0;
+            left: 0;
+            top: 2%;
+            text-align: center;
+            opacity: 0;
+        }
+        @media screen and (min-width: 860px) {
+            .sky-container {
+                top: 18%;
+                right: 12%;
+                left: auto;
+            }
+        }
+        .sky-container__left, .sky-container__right {
+            display: inline-block;
+            vertical-align: top;
+            font-weight: bold;
+        }
+        .sky-container__left h2, .sky-container__right h2 {
+            font-family: 'brandon-grotesque', sans-serif;
+            font-size: 26px;
+            line-height: 26px;
+            margin: 0;
+        }
+        @media screen and (min-width: 860px) {
+            .sky-container__left h2, .sky-container__right h2 {
+                font-size: 72px;
+                line-height: 68px;
+            }
+        }
+        .sky-container__left {
+            margin-right: 5px;
+        }
+        .sky-container .thirty-one {
+            letter-spacing: 4px;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .twitter:hover a {
+            transform: rotate(-45deg) scale(1.05);
+        }
+        .twitter:hover i {
+            color: #21c2ff;
+        }
+        .twitter a {
+            bottom: -40px;
+            right: -75px;
+            transform: rotate(-45deg);
+        }
+        .twitter i {
+            bottom: 7px;
+            right: 7px;
+            color: #00ACED;
+        }
+
+        .social-icon a {
+            position: absolute;
+            background: white;
+            color: white;
+            box-shadow: -1px -1px 20px 0px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            width: 150px;
+            height: 80px;
+            transform-origin: 50% 50%;
+            transition: .15s ease-out;
+        }
+        .social-icon i {
+            position: absolute;
+            pointer-events: none;
+            z-index: 1000;
+            transition: .15s ease-out;
+        }
+
+        .youtube:hover a {
+            transform: rotate(45deg) scale(1.05);
+        }
+        .youtube:hover i {
+            color: #ec4c44;
+        }
+        .youtube a {
+            bottom: -40px;
+            left: -75px;
+            transform: rotate(45deg);
+        }
+        .youtube i {
+            bottom: 7px;
+            left: 7px;
+            color: #E62117;
+        }
 
     </style>
     <script src="js.cookie-2.1.0.min.js"></script>
@@ -361,6 +589,45 @@
     </div>
     <div id="wel"></div>
 </header>
+<div class="x-mark">
+    <div class="container">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</div>
+<div class="intro-container">
+
+    <h1>ONE WITH AN EVERLASTING DESIRE <br> FOR THE UNKNOWN & UNTOLD</h1>
+
+    <div class="button shift-camera-button">
+        <div class="border">
+            <div class="left-plane"></div>
+            <div class="right-plane"></div>
+        </div>
+        <div class="text">To The Stars</div>
+    </div>
+</div>
+<div class="sky-container">
+    <div class="text-right sky-container__left">
+        <h2 class="portfolio">
+            PORTFOLIO
+        </h2>
+        <h2 class="resurrection">
+            resurrection
+        </h2>
+    </div>
+    <div class="text-left sky-container__right">
+        <h2 class="08">
+            08
+        </h2>
+        <h2 class="thirty-one">
+            31
+        </h2>
+        <h2 class="2016">
+            2016
+        </h2>
+    </div>
+</div>
 <nav>
     <ul>
         <li><a href="#" >首页</a></li>
@@ -375,7 +642,6 @@
 
     </ul>
 </nav>
-
 
 
 
@@ -445,50 +711,45 @@
 
 
 <!--<div class="brank">-->
-    <!---->
-    <!--<a href="#"> <img src="images/air0.jpg"></a>-->
-    <!--<a href="#"> <img src="images/tiger.png"></a>-->
-    <!--<a href="#"><img src="images/vans.jpg"></a>-->
-    <!--<a href="#"><img src="images/nb.jpg"></a>-->
+<!---->
+<!--<a href="#"> <img src="images/air0.jpg"></a>-->
+<!--<a href="#"> <img src="images/tiger.png"></a>-->
+<!--<a href="#"><img src="images/vans.jpg"></a>-->
+<!--<a href="#"><img src="images/nb.jpg"></a>-->
 <!--</div>-->
 <!--<div class="brank">-->
-    <!--<a href="#"> <img src="images/ad.PNG"></a>-->
-    <!--<a href="#"> <img src="images/nike.jpg"></a>-->
-    <!--<a href="#"><img src="images/ruibu1.PNG"></a>-->
-    <!--<a href="#"><img src="images/kw.jpg"></a>-->
+<!--<a href="#"> <img src="images/ad.PNG"></a>-->
+<!--<a href="#"> <img src="images/nike.jpg"></a>-->
+<!--<a href="#"><img src="images/ruibu1.PNG"></a>-->
+<!--<a href="#"><img src="images/kw.jpg"></a>-->
 <!--</div>-->
-    <!--<div class="nine">-->
-        <!--<div class="albums-tab">-->
-            <!--<div class="albums-tab-thumb sim-anim-6">-->
-                <!--<img src="images/air0.jpg" class="all studio"/>-->
-                <!--<img src="images/air0.jpg" class="all studio"/>-->
-                <!--<img src="images/air0.jpg" class="all studio"/>-->
-                <!--<img src="images/air0.jpg" class="all studio"/>-->
-                <!--<img src="images/air0.jpg" class="all studio"/>-->
-                <!--<img src="images/a5pp.PNG" class="all studio"/>-->
-                <!--<img src="images/a5pp.PNG" class="all studio"/>-->
-                <!--<img src="images/a5pp.PNG" class="all studio"/>-->
-                <!--<img src="images/air0.jpg" class="all studio"/>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="albums-tab">-->
-            <!--<div class="albums-tab-thumb sim-anim-5">-->
-                <!--<img src="images/air0.jpg" class="all studio"/>-->
-                <!--<img src="images/air0.jpg" class="all studio"/>-->
-                <!--<img src="images/air0.jpg" class="all studio"/>-->
-                <!--<img src="images/air0.jpg" class="all studio"/>-->
-                <!--<img src="images/air0.jpg" class="all studio"/>-->
-                <!--<img src="images/ruibu1.PNG" class="all studio"/>-->
+<!--<div class="nine">-->
+<!--<div class="albums-tab">-->
+<!--<div class="albums-tab-thumb sim-anim-6">-->
+<!--<img src="images/air0.jpg" class="all studio"/>-->
+<!--<img src="images/air0.jpg" class="all studio"/>-->
+<!--<img src="images/air0.jpg" class="all studio"/>-->
+<!--<img src="images/air0.jpg" class="all studio"/>-->
+<!--<img src="images/air0.jpg" class="all studio"/>-->
+<!--<img src="images/a5pp.PNG" class="all studio"/>-->
+<!--<img src="images/a5pp.PNG" class="all studio"/>-->
+<!--<img src="images/a5pp.PNG" class="all studio"/>-->
+<!--<img src="images/air0.jpg" class="all studio"/>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="albums-tab">-->
+<!--<div class="albums-tab-thumb sim-anim-5">-->
+<!--<img src="images/air0.jpg" class="all studio"/>-->
+<!--<img src="images/air0.jpg" class="all studio"/>-->
+<!--<img src="images/air0.jpg" class="all studio"/>-->
+<!--<img src="images/air0.jpg" class="all studio"/>-->
+<!--<img src="images/air0.jpg" class="all studio"/>-->
+<!--<img src="images/ruibu1.PNG" class="all studio"/>-->
 
-            <!--</div>-->
+<!--</div>-->
 
-        <!--</div>-->
-    <!--</div>-->
-<article class="lanren" style="z-index: -1;position: relative;top: 260px">
-    <p id="text">Air jordon Tiger Vans Newbalance Nike Reebook</p>
-    <button id="reset" data-bound="true" style="display: none;">reset</button>
-</article>
-<script src="index.js"></script>
+<!--</div>-->
+<!--</div>-->
 <div id="main">
     <ul>
         <li> <img src="images/air0.jpg" alt="Iron Man 1" width="300" height="200">
@@ -517,8 +778,6 @@
 
 
 
-
-
 <!--<div class="xinlang">
     <img src="images/lo.PNG" >
     <img src="images/line.PNG">
@@ -530,7 +789,6 @@
     <img src="images/444.jpg" style="width: 100%; " >
 
 </div>
-
 
 
 <div class="con">
