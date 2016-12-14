@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <title>Title</title>
+    <link rel="stylesheet" href="css/slide.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="data.shoes.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="wel.js"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: '微软雅黑';
+        }
+        header{
+            width: 100%;
+            height: 40px;
+            background-color: black;
+        }
+        .login{
+            width: 140px;
+            height: 40px;
+            float: right;
+            margin-right: 30px;
+        }
+        .login a{
+            line-height: 40px;
+            text-decoration: none;
+            color: white;
+            margin-left: 10px;
+            font-size: 12px;
+        }
+        .login a:hover{
+            color: red;
+        }
+        nav{
+            width:1100px;
+            height: 60px;
+            margin: 0 auto;
+
+        }
+        nav ul{
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li{
+            float: left;
+            list-style-type: none;
+        }
+        nav ul li a{
+            display: block;
+            margin: 0 40px;
+
+            line-height: 60px;
+            text-decoration: none;
+            text-align: center;
+            color: black;
+        }
+        #fir{
+            border-bottom: 2px solid black;
+            color: white;
+        }
+        nav ul li a:hover{
+            border-bottom: 2px solid black;
+            color: white;
+            line-height: 58px;
+        }
+        .banner{
+            width: 100%;
+
+        }
+        .controduce{
+            width: 530px;
+            margin: 40px auto;
+        }
+
+        .contain{
+            width: 100%;
+            height: 780px;
+        }
+        .list{
+            width: 1100px;
+            height: 780px;
+            margin: 0 auto;
+        }
+        .list_1{
+            width: 1248px;
+            height: 420px;
+            margin-top: 20px;
+
+        }
+        .lista{
+            width: 350px;
+            height: 420px;
+            float: left;
+            margin-left: 20px;
+        }
+        .lista span{
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .lista img{
+            width: 350px;
+            -webkit-border-radius: 10px;
+        }
+        .lista h2{
+            margin-left: 20px;
+        }
+        .lista a{
+            color: black;
+            text-decoration: none;
+        }
+        .lista a:hover{
+            color: red;
+        }
+        .list_L{
+            width: 440px;
+            height: 2000px;
+            float: left;
+        }
+        .list_a{
+            width: 420px;
+            height: 420px;
+            margin-top: 20px;
+        }
+        .list_a span{
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .list_a img{
+            width: 420px;
+            -webkit-border-radius: 10px;
+            height: 300px;
+        }
+        .list_a h2{
+            margin-left: 20px;
+        }
+        .list_a a{
+            color: black;
+            text-decoration: none;
+        }
+        .list_a a:hover{
+            color: red;
+        }
+        .lmg a:hover{
+            background-image: url("images/a4p.PNG");
+        }
+        .list_R{
+            width: 440px;
+            height: 2000px;
+            float: right;
+        }
+        .jordon{
+            width: 100%;
+            height: 574px;
+            margin-top: 40px;
+
+        }
+
+
+        .xinlang{
+            width: 138px;
+            height: 80px;
+            margin:20px auto;
+        }
+        .xinlang img{
+            height: 40px;
+            margin-top: 20px;
+        }
+        .sao{
+            width: 120px;
+            height: 160px;
+            margin: 40px auto 0 auto;
+        }
+        .sao img{
+            width: 120px;
+        }
+
+        .ck-slide{ width: 1440px; height: 583px; margin: 0 auto;}
+        .ck-slide ul.ck-slide-wrapper { height: 583px;}
+        #wel{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            float: right;
+            font-size: 12px;
+            color: white;
+        }
+        .brank{
+            width: 1048px;
+            height: 120px;
+            margin: 40px auto 0 auto;
+        }
+        .brank img{
+            height: 120px;
+            float: left;
+            margin-left: 60px;
+        }
+    </style>
+    <script src="js.cookie-2.1.0.min.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/easyResponsiveTabs.js"></script>
+
+
+</head>
+<body>
+<header>
+    <img src="images/air0.jpg" id="logo" style="height: 30px;float: left;margin-left: 30px;margin-top: 5px;">
+
+    <div class="login">
+        <a href="login.html" id="user">登陆</a><a href="register.html">注册</a>
+    </div>
+    <div id="wel"></div>
+</header>
+<nav>
+    <ul>
+        <li><a href="#" >首页</a></li>
+        <li><a href="#">AJ</a></li>
+        <li><a href="#">Tiger</a></li>
+        <li><a href="#">Vans</a></li>
+        <li><a href="#">NB</a></li>
+        <li><a href="#">Adidas</a></li>
+        <li><a href="#">Nike</a></li>
+        <li><a href="#">Reebok</a></li>
+        <li><a href="#">Converce</a></li>
+
+    </ul>
+</nav>
+
+
+
+
+
+<!-- html -->
+<div class="ck-slide">
+    <ul class="ck-slide-wrapper">
+        <li>
+            <a href="javascript:"><img src="images/333.jpg" alt="" style="width: 100%;"></a>
+        </li>
+        <li style="display:none">
+            <a href="javascript:"><img src="images/pa.jpg" alt="" style="width: 100%;"></a>
+        </li>
+        <li style="display:none">
+            <a href="javascript:"><img src="images/111.jpg" alt="" style="width: 100%;"></a>
+        </li>
+        <li style="display:none">
+            <a href="javascript:"><img src="images/555.jpg" alt="" style="width: 100%;"></a>
+        </li>
+        <li style="display:none">
+            <a href="javascript:"><img src="images/666.jpg" alt="" style="width: 100%;"></a>
+        </li>
+    </ul>
+    <a href="javascript:;" class="ctrl-slide ck-prev">上一张</a> <a href="javascript:;" class="ctrl-slide ck-next">下一张</a>
+    <div class="ck-slidebox">
+        <div class="slideWrap">
+            <ul class="dot-wrap">
+                <li class="current"><em>1</em></li>
+                <li><em>2</em></li>
+                <li><em>3</em></li>
+                <li><em>4</em></li>
+                <li><em>5</em></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- js -->
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<!--<script src="js/slide.min.js"></script>-->
+<script src="js/slide.js"></script>
+<script>
+    $('.ck-slide').ckSlide({
+        autoPlay: true,//默认为不自动播放，需要时请以此设置
+        dir: 'x',//默认效果淡隐淡出，x为水平移动，y 为垂直滚动
+        interval:2000//默认间隔2000毫秒
+
+    });
+</script>
+<!-- Demo end -->
+
+
+
+
+
+
+<style>
+    * { margin: 0; padding: 0;}
+    html, body { height: 100%; overflow-x: hidden;}
+    .main h1 { width: 100%; margin: 40px auto; font: 32px "Microsoft Yahei"; text-align:center;}
+    /*注释*/
+    .zhushi{width:900px;margin: 30px auto; }/*注释*/
+    .zhushi p{ line-height:24px; ;font-size:16px;text-align:left;}
+</style>
+
+
+<div class="brank">
+    <a href="#"> <img src="images/air0.jpg"></a>
+    <a href="#"> <img src="images/tiger.png"></a>
+    <a href="#"><img src="images/vans.jpg"></a>
+    <a href="#"><img src="images/nb.jpg"></a>
+</div>
+<div class="brank">
+    <a href="#"> <img src="images/ad.PNG"></a>
+    <a href="#"> <img src="images/nike.jpg"></a>
+    <a href="#"><img src="images/ruibu1.PNG"></a>
+    <a href="#"><img src="images/kw.jpg"></a>
+</div>
+
+
+
+
+<!--<div class="xinlang">
+    <img src="images/lo.PNG" >
+    <img src="images/line.PNG">
+    <a href="#"> <img src="images/xinl.PNG"></a>
+</div>-->
+
+<div class="jordon">
+
+    <img src="images/444.jpg" style="width: 100%; " >
+
+</div>
+
+
+<div class="contain">
+    <div class="list">
+        <div class="list_1">
+            <div class="lista">
+                <a href="#" id="a0"> <img src="" id="img_0"></a>
+                <span id="no_0"></span>
+                <h2 id="name_0"></h2>
+                <span id="inform_0"></span>
+            </div>
+            <div class="lista">
+                <a href="#" id="a1"><img src="" id="img_1"></a>
+                <span id="no_1"></span>
+                <h2><a href="#" id="name_1"></a></h2>
+                <span id="inform_1"></span>
+            </div>
+            <div class="lista">
+                <a href="#" id="a2"><img src="" id="img_2"></a>
+                <span id="no_2"></span>
+                <h2><a href="#" id="name_2"></a></h2>
+                <span id="inform_2"></span>
+            </div>
+        </div>
+        <div class="list_1">
+            <div class="lista">
+                <a href="#" id="a3"><img src="" id="img_3"></a>
+                <span id="no_3"></span>
+                <h2><a href="#" id="name_3"></a></h2>
+                <span id="inform_3"></span>
+            </div>
+            <div class="lista">
+                <a href="#" id="a4"><img src="" id="img_4"></a>
+                <span id="no_4"></span>
+                <h2><a href="#" id="name_4"></a></h2>
+                <span id="inform_4"></span>
+            </div>
+            <div class="lista">
+                <a href="#" id="a5"><img src="" id="img_5"></a>
+                <span id="no_5"></span>
+                <h2><a href="#" id="name_5"></a></h2>
+                <span id="inform_5"></span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="jordon">
+
+    <img src="images/mtiger.jpg" style="width: 100%; " >
+
+</div>
+
+
+<div class="contain">
+    <div class="list">
+        <div class="list_1">
+            <div class="lista">
+                <a href="#" id="a6"><img src="" id="img_6"></a>
+                <span id="no_6"></span>
+                <h2><a href="#" id="name_6"></a></h2>
+                <span id="inform_6"></span>
+            </div>
+            <div class="lista">
+                <a href="#" id="a7"><img src="" id="img_7"></a>
+                <span id="no_7"></span>
+                <h2><a href="#" id="name_7"></a></h2>
+                <span id="inform_7"></span>
+            </div>
+            <div class="lista">
+                <a href="#" id="a8"><img src="" id="img_8"></a>
+                <span id="no_8"></span>
+                <h2><a href="#" id="name_8"></a></h2>
+                <span id="inform_8"></span>
+            </div>
+        </div>
+        <div class="list_1">
+            <div class="lista">
+                <a href="#" id="a9"><img src="" id="img_9"></a>
+                <span id="no_9"></span>
+                <h2><a href="#" id="name_9"></a></h2>
+                <span id="inform_9"></span>
+            </div>
+            <div class="lista">
+                <a href="#" id="a10"><img src="" id="img_10"></a>
+                <span id="no_10"></span>
+                <h2><a href="#" id="name_10"></a></h2>
+                <span id="inform_10"></span>
+            </div>
+            <div class="lista">
+                <a href="#" id="a11"><img src="" id="img_11"></a>
+                <span id="no_11"></span>
+                <h2><a href="#" id="name_11"></a></h2>
+                <span id="inform_11"></span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="jordon">
+
+    <img src="images/v1.jpg" style="width: 100%; " >
+
+</div>
+
+
+<div class="contain">
+    <div class="list">
+        <div class="list_1">
+            <div class="lista">
+                <a href="#" id="a12"><img src="" id="img_12"></a>
+                <span id="no_12"></span>
+                <h2><a href="#" id="name_12"></a></h2>
+                <span id="inform_12"></span>
+            </div>
+            <div class="lista">
+                <a href="#" id="a13"><img src="" id="img_13"></a>
+                <span id="no_13"></span>
+                <h2><a href="#" id="name_13"></a></h2>
+                <span id="inform_13"></span>
+            </div>
+            <div class="lista">
+                <a href="#" id="a14"><img src="" id="img_14"></a>
+                <span id="no_14"></span>
+                <h2><a href="#" id="name_14"></a></h2>
+                <span id="inform_14"></span>
+            </div>
+            <div class="list_1">
+                <div class="lista">
+                    <a href="#" id="a15"><img src="" id="img_15"></a>
+                    <span id="no_15"></span>
+                    <h2><a href="#" id="name_15"></a></h2>
+                    <span id="inform_15"></span>
+                </div>
+                <div class="lista">
+                    <a href="#" id="a16"><img src="" id="img_16"></a>
+                    <span id="no_16"></span>
+                    <h2><a href="#" id="name_16"></a></h2>
+                    <span id="inform_16"></span>
+                </div>
+                <div class="lista">
+                    <a href="#" id="a17"><img src="" id="img_17"></a>
+                    <span id="no_17"></span>
+                    <h2><a href="#" id="name_17"></a></h2>
+                    <span id="inform_17"></span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="jordon">
+
+    <img src="images/newbanlances.jpg" style="width: 100%; " >
+
+</div>
+
+
+<div class="contain">
+    <div class="list">
+        <div class="list_1">
+            <div class="lista">
+                <a href="#" id="a18"><img src="" id="img_18" ></a>
+                <span id="no_18"></span>
+                <h2><a href="#" id="name_18"></a></h2>
+                <span id="inform_18"></span>
+            </div>
+            <div class="lista">
+                <a href="#" id="a19"><img src="" id="img_19"></a>
+                <span id="no_19"></span>
+                <h2><a href="#" id="name_19"></a></h2>
+                <span id="inform_19"></span>
+            </div>
+            <div class="lista">
+                <a href="#" id="a20"><img src="" id="img_20"></a>
+                <span id="no_20"></span>
+                <h2><a href="#" id="name_20"></a></h2>
+                <span id="inform_20"></span>
+            </div>
+
+            <div class="list_1">
+
+                <div class="lista">
+                    <a href="#" id="a21"><img src="" id="img_21"></a>
+                    <span id="no_21"></span>
+                    <h2><a href="#" id="name_21"></a></h2>
+                    <span id="inform_21"></span>
+                </div>
+                <div class="lista">
+                    <a href="#" id="a22"><img src="" id="img_22"></a>
+                    <span id="no_22"></span>
+                    <h2><a href="#" id="name_22"></a></h2>
+                    <span id="inform_22"></span>
+                </div>
+                <div class="lista">
+                    <a href="#" id="a23"><img src="" id="img_23"></a>
+                    <span id="no_23"></span>
+                    <h2><a href="#" id="name_23"></a></h2>
+                    <span id="inform_23"></span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<footer>
+
+
+</footer>
+
+
+
+<script>
+    for (var i=0;i<shoes.length;i++){
+        var e=document.getElementById('a'+i);
+        e.setAttribute('href','jordon2.html?id='+shoes[i].id);
+
+
+        $('#name_'+i).text(shoes[i].name);
+        $('#no_'+i).text(shoes[i].no);
+        $('#inform_'+i).text(shoes[i].inform);
+        $('#img_'+i).attr('src',shoes[i].pic);
+    }
+</script>
+
+</body>
+</html>

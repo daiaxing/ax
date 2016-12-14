@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .contain{
+            width: 360px;
+            height: 520px;
+            background-color: white;
+            float: right;
+            margin:140px 200px 0 150px;
+            -webkit-border-radius: 10px;
+        }
+        .contain img{
+            width: 80px;
+            margin-left: 140px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .contain h3{
+            margin-left: 90px;
+        }
+        .contain input{
+            margin-left: 90px;
+            width: 180px;
+            height: 20px;
+        }
+        #sub{
+            width: 184px;
+            height: 30px;
+            margin-top: 60px;
+            line-height: 30px;
+            font-size: 14px;
+        }
+        #sub:hover{
+            background-color: #bc213f;
+            color: white;
+        }
+        #register{
+            width: 184px;
+            height: 30px;
+            margin-top: 20px;
+            line-height: 30px;
+            font-size: 14px;
+        }
+        #register:hover{
+            background-color: #bc213f;
+            color: white;
+        }
+
+    </style>
+    <script src="js.cookie-2.1.0.min.js"></script>
+</head>
+<body>
+<img src="images/bg2.png" style="width: 100%; position: absolute;top: 0;z-index: -1;">
+<div class="contain">
+    <img src="images/lo.PNG">
+<h3>Name</h3><input type="text" id="name">
+    <h3>Password</h3><input type="text" id="password">
+    <input type="submit" id="sub" value="登陆" onclick="foo()">
+    <a href="register.html"><input type="submit" id="register" value="一键注册"></a>
+
+</div>
+<script>
+    var r=[{a:111 ,b:222},{a:333,b:222},{a:555,b:222},{a:777,b:222}];
+    var c='';
+    var d='';
+    var f=0;
+7
+    function foo(){
+        c=document.getElementById('name').value;
+        d=document.getElementById('password').value;
+        var user;
+        var f=0;
+        for(var i= 0;i< r.length;i++){
+            if(r[i].a==c&&r[i].b==d){
+                f=1;
+                user=r[i].a;
+                break;
+
+            }else{
+                f=0;
+            }
+        }
+        if(f==0) {
+            alert('失败');
+
+        }else{
+            alert('登陆成功');
+            window.location.href='index2.html';
+            Cookies.set('user',user);
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

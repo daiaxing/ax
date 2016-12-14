@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .contain{
+            width: 360px;
+            height: 520px;
+            background-color: white;
+            float: left;
+            margin:200px 200px 0 140px;
+            -webkit-border-radius: 10px;
+        }
+        .contain img{
+            width: 80px;
+            margin-left: 140px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .contain h3{
+            margin-left: 90px;
+        }
+        .contain input{
+            margin-left: 90px;
+            width: 180px;
+            height: 20px;
+        }
+        #register{
+            width: 184px;
+            height: 40px;
+            margin-top: 60px;
+            line-height: 40px;
+            font-size: 14px;
+        }
+        #register:hover{
+            background-color: #bc213f;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<img src="images/bg1.jpg" style="width: 100%;position: absolute;top: 0;z-index: -1;">
+<div class="contain">
+    <img src="images/lo.PNG">
+    <h3>Name</h3><input type="text" id="name">
+    <h3>Password</h3><input type="text" id="password">
+    <h3>Repeat</h3><input type="text"id="repeat">
+    <input type="submit" id="register" value="一键注册" onclick="foo()">
+
+</div>
+<script>
+    var r=[{a:111},{a:333},{a:555},{a:777}];
+    var c='';
+    var d='';
+    var e='';
+    function foo(){
+       c=document.getElementById('name').value;
+       d=document.getElementById('password').value;
+       e=document.getElementById('repeat').value;
+        for (var i = 0; i < r.length; i++) {
+            if (c == '' || d == '' || e == ' ') {
+                alert('请输入');
+                return;
+            }
+
+
+
+            if (r[i].a == c) {
+                f = 1;
+                break;
+            } else {
+                f=0;
+            }
+        }
+
+        if (f == 1) {
+            alert('用户名重复');
+        }
+        else {
+            if (d != e) {
+                alert('密码不一致');
+            }
+            else{
+                alert('注册成功');
+                window.location.href='login.html';
+            }
+        }
+
+    }
+
+
+
+</script>
+
+</body>
+</html>
