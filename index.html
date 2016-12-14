@@ -194,7 +194,7 @@
         }
         .brank{
             width: 1048px;
-            height: 120px;
+            height: 700px;
             margin: 40px auto 0 auto;
         }
         .brank img{
@@ -317,6 +317,23 @@
             -webkit-transform: translate3d(0,0,0);
             transform: translate3d(0,0,0);
         }
+        .nine{
+            width: 1346px;
+            height: 400px;
+        }
+
+        #main{width:1024px;height:473px;margin:60px auto 0 auto;}
+        #main ul{list-style:none;}
+        #main ul li{width:200px;height:240px;float:left;position:relative; margin-right: 60px;margin-left: 60px;}
+        #main ul li img{border:2px solid #F5F5F5;-webkit-transition:1s ease;-moz-transition:1s ease;-webkit-border-radius: 10px;}
+        #main .info{width:240px;height:100px;border:10px solid #F5F5F5;background:#deddcd;position:absolute;bottom:-50px;right:0;-webkit-transition:1s ease;-moz-transition:1s ease;-moz-transform:rotatey(30deg);-webkit-transform:rotatey(30deg);}
+        #main .info h2{text-align:center;line-height:70px;color:#7a3f3a;font-weight:normal;font-size:20px;}
+        #main .info p{padding:0 20px;font-size:14px;}
+        #main .info a{display:block;width:100px;height:30px;background:#7a3f3a;color:#FFF;border-radius:5px;text-decoration:none;text-align:center;line-height:30px;margin:10px auto;}
+
+        #main ul li:hover .info{-webkit-transform:rotatey(0deg);-moz-transform:rotatey(0deg);right:30px;bottom:-70px;}
+        #main ul li:hover img{-webkit-transform:rotatey(360deg);-moz-transform:rotatey(360deg);}
+
     </style>
     <script src="js.cookie-2.1.0.min.js"></script>
     <script src="js/jquery-2.1.4.min.js"></script>
@@ -334,11 +351,11 @@
 </head>
 <body>
 <header>
-        <img src="images/air0.jpg" id="logo" style="height: 30px;float: left;margin-left: 30px;margin-top: 5px;">
+    <img src="images/air0.jpg" id="logo" style="height: 30px;float: left;margin-left: 30px;margin-top: 5px;">
 
-        <div class="login">
-         <a href="login.html" id="user">登陆</a><a href="register.html">注册</a>
-        </div>
+    <div class="login">
+        <a href="login.html" id="user">登陆</a><a href="register.html">注册</a>
+    </div>
     <div id="wel"></div>
 </header>
 <nav>
@@ -360,53 +377,53 @@
 
 
 
-        <!-- html -->
-        <div class="ck-slide">
-            <ul class="ck-slide-wrapper">
-                <li>
-                    <a href="javascript:"><img src="images/333.jpg" alt="" style="width: 100%;"></a>
-                </li>
-                <li style="display:none">
-                    <a href="javascript:"><img src="images/pa.jpg" alt="" style="width: 100%;"></a>
-                </li>
-                <li style="display:none">
-                    <a href="javascript:"><img src="images/111.jpg" alt="" style="width: 100%;"></a>
-                </li>
-                <li style="display:none">
-                    <a href="javascript:"><img src="images/555.jpg" alt="" style="width: 100%;"></a>
-                </li>
-                <li style="display:none">
-                    <a href="javascript:"><img src="images/666.jpg" alt="" style="width: 100%;"></a>
-                </li>
+<!-- html -->
+<div class="ck-slide">
+    <ul class="ck-slide-wrapper">
+        <li>
+            <a href="javascript:"><img src="images/333.jpg" alt="" style="width: 100%;"></a>
+        </li>
+        <li style="display:none">
+            <a href="javascript:"><img src="images/pa.jpg" alt="" style="width: 100%;"></a>
+        </li>
+        <li style="display:none">
+            <a href="javascript:"><img src="images/111.jpg" alt="" style="width: 100%;"></a>
+        </li>
+        <li style="display:none">
+            <a href="javascript:"><img src="images/555.jpg" alt="" style="width: 100%;"></a>
+        </li>
+        <li style="display:none">
+            <a href="javascript:"><img src="images/666.jpg" alt="" style="width: 100%;"></a>
+        </li>
+    </ul>
+    <a href="javascript:;" class="ctrl-slide ck-prev">上一张</a> <a href="javascript:;" class="ctrl-slide ck-next">下一张</a>
+    <div class="ck-slidebox">
+        <div class="slideWrap">
+            <ul class="dot-wrap">
+                <li class="current"><em>1</em></li>
+                <li><em>2</em></li>
+                <li><em>3</em></li>
+                <li><em>4</em></li>
+                <li><em>5</em></li>
             </ul>
-            <a href="javascript:;" class="ctrl-slide ck-prev">上一张</a> <a href="javascript:;" class="ctrl-slide ck-next">下一张</a>
-            <div class="ck-slidebox">
-                <div class="slideWrap">
-                    <ul class="dot-wrap">
-                        <li class="current"><em>1</em></li>
-                        <li><em>2</em></li>
-                        <li><em>3</em></li>
-                        <li><em>4</em></li>
-                        <li><em>5</em></li>
-                    </ul>
-                </div>
-            </div>
         </div>
+    </div>
+</div>
 
-        <!-- js -->
+<!-- js -->
 
-        <script src="js/jquery-1.8.3.min.js"></script>
-        <!--<script src="js/slide.min.js"></script>-->
-        <script src="js/slide.js"></script>
-        <script>
-            $('.ck-slide').ckSlide({
-                autoPlay: true,//默认为不自动播放，需要时请以此设置
-                dir: 'x',//默认效果淡隐淡出，x为水平移动，y 为垂直滚动
-                interval:2000//默认间隔2000毫秒
+<script src="js/jquery-1.8.3.min.js"></script>
+<!--<script src="js/slide.min.js"></script>-->
+<script src="js/slide.js"></script>
+<script>
+    $('.ck-slide').ckSlide({
+        autoPlay: true,//默认为不自动播放，需要时请以此设置
+        dir: 'x',//默认效果淡隐淡出，x为水平移动，y 为垂直滚动
+        interval:2000//默认间隔2000毫秒
 
-            });
-        </script>
-        <!-- Demo end -->
+    });
+</script>
+<!-- Demo end -->
 
 
 
@@ -423,18 +440,70 @@
 </style>
 
 
-                    <div class="brank">
-                        <a href="#"> <img src="images/air0.jpg"></a>
-                        <a href="#"> <img src="images/tiger.png"></a>
-                        <a href="#"><img src="images/vans.jpg"></a>
-                        <a href="#"><img src="images/nb.jpg"></a>
-                    </div>
-                    <div class="brank">
-                        <a href="#"> <img src="images/ad.PNG"></a>
-                        <a href="#"> <img src="images/nike.jpg"></a>
-                        <a href="#"><img src="images/ruibu1.PNG"></a>
-                        <a href="#"><img src="images/kw.jpg"></a>
-                    </div>
+<!--<div class="brank">-->
+    <!---->
+    <!--<a href="#"> <img src="images/air0.jpg"></a>-->
+    <!--<a href="#"> <img src="images/tiger.png"></a>-->
+    <!--<a href="#"><img src="images/vans.jpg"></a>-->
+    <!--<a href="#"><img src="images/nb.jpg"></a>-->
+<!--</div>-->
+<!--<div class="brank">-->
+    <!--<a href="#"> <img src="images/ad.PNG"></a>-->
+    <!--<a href="#"> <img src="images/nike.jpg"></a>-->
+    <!--<a href="#"><img src="images/ruibu1.PNG"></a>-->
+    <!--<a href="#"><img src="images/kw.jpg"></a>-->
+<!--</div>-->
+    <!--<div class="nine">-->
+        <!--<div class="albums-tab">-->
+            <!--<div class="albums-tab-thumb sim-anim-6">-->
+                <!--<img src="images/air0.jpg" class="all studio"/>-->
+                <!--<img src="images/air0.jpg" class="all studio"/>-->
+                <!--<img src="images/air0.jpg" class="all studio"/>-->
+                <!--<img src="images/air0.jpg" class="all studio"/>-->
+                <!--<img src="images/air0.jpg" class="all studio"/>-->
+                <!--<img src="images/a5pp.PNG" class="all studio"/>-->
+                <!--<img src="images/a5pp.PNG" class="all studio"/>-->
+                <!--<img src="images/a5pp.PNG" class="all studio"/>-->
+                <!--<img src="images/air0.jpg" class="all studio"/>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="albums-tab">-->
+            <!--<div class="albums-tab-thumb sim-anim-5">-->
+                <!--<img src="images/air0.jpg" class="all studio"/>-->
+                <!--<img src="images/air0.jpg" class="all studio"/>-->
+                <!--<img src="images/air0.jpg" class="all studio"/>-->
+                <!--<img src="images/air0.jpg" class="all studio"/>-->
+                <!--<img src="images/air0.jpg" class="all studio"/>-->
+                <!--<img src="images/ruibu1.PNG" class="all studio"/>-->
+
+            <!--</div>-->
+
+        <!--</div>-->
+    <!--</div>-->
+<div id="main">
+    <ul>
+        <li> <img src="images/air0.jpg" alt="Iron Man 1" width="300" height="200">
+
+        </li>
+        <li> <img src="images/tiger.png" alt="Iron Man 2" width="300" height="200">
+
+        </li>
+        <li> <img src="images/vans.jpg" alt="Iron Man 3" width="300" height="200">
+
+        </li>
+    </ul>
+    <ul>
+        <li> <img src="images/nb.jpg" alt="Iron Man 1" width="300" height="200">
+
+        </li>
+        <li> <img src="images/nike.jpg" alt="Iron Man 2" width="300" height="200">
+
+        </li>
+        <li> <img src="images/ruibu1.PNG" alt="Iron Man 3" width="300" height="200">
+
+        </li>
+    </ul>
+</div>
 
 
 
@@ -674,79 +743,79 @@
     </div>
 </div>
 
-        <!--<div class="list_L">
+<!--<div class="list_L">
 
-            <div class="list_a" id="ia">
-                 <img src="images/a1.PNG" id="mg">
-                <span id="no"></span>
-                <h2><a href="#" id="name"></a></h2>
-                <span id="inform"></span>
+    <div class="list_a" id="ia">
+         <img src="images/a1.PNG" id="mg">
+        <span id="no"></span>
+        <h2><a href="#" id="name"></a></h2>
+        <span id="inform"></span>
 
-            </div>
-            <div class="list_a" id="ib">
-                <a href="#"> <img src="images/aj44p.PNG"></a>
-                <span>408452</span>
-                <a href="#"><h2>AIR JORDON 4</h2></a>
-                <span>Air Jordan 4 Alternate </span>
-            </div>
-            <div class="list_a" id="ic">
-                <a href="#"> <img src="images/a5p.PNG"></a>
-                <span>440888</span>
-                <a href="#"><h2>AIR JORDON 5</h2></a>
-                <span>Air Jordan 5 Olympic </span>
-            </div>
-            <div class="list_a" id="id">
-                <a href="#"> <img src="images/aa6p.PNG"></a>
-                <span>384664</span>
-                <a href="#"><h2>AIR JORDON 6</h2></a>
-                <span>Air Jordan 6 Metallic  </span>
-            </div>
-            <div class="list_a" id="ie">
-                <a href="#"> <img src="images/a111p.PNG"></a>
-                <span>384664</span>
-                <a href="#"><h2>AIR JORDON 11</h2></a>
-                <span>Air Jordan 11 Metallic  </span>
-            </div>
-
-
+    </div>
+    <div class="list_a" id="ib">
+        <a href="#"> <img src="images/aj44p.PNG"></a>
+        <span>408452</span>
+        <a href="#"><h2>AIR JORDON 4</h2></a>
+        <span>Air Jordan 4 Alternate </span>
+    </div>
+    <div class="list_a" id="ic">
+        <a href="#"> <img src="images/a5p.PNG"></a>
+        <span>440888</span>
+        <a href="#"><h2>AIR JORDON 5</h2></a>
+        <span>Air Jordan 5 Olympic </span>
+    </div>
+    <div class="list_a" id="id">
+        <a href="#"> <img src="images/aa6p.PNG"></a>
+        <span>384664</span>
+        <a href="#"><h2>AIR JORDON 6</h2></a>
+        <span>Air Jordan 6 Metallic  </span>
+    </div>
+    <div class="list_a" id="ie">
+        <a href="#"> <img src="images/a111p.PNG"></a>
+        <span>384664</span>
+        <a href="#"><h2>AIR JORDON 11</h2></a>
+        <span>Air Jordan 11 Metallic  </span>
+    </div>
 
 
-        </div>
-        <div class="list_R">
-            <div class="list_a" id="if">
-                <a href="#"> <img src="images/aa1p.PNG" ></a>
-                <span>554724</span>
-                <a href="#"><h2>AIR JORDON 1</h2></a>
-                <span>Air Jordan 1 Mid  </span>
-            </div>
-            <div class="list_a" id="ig">
-                <a href="#"> <img src="images/a4p.PNG"></a>
-                <span>408452</span>
-                <a href="#"><h2>AIR JORDON 4</h2></a>
-                <span>Air Jordan 4 OG </span>
-            </div>
-            <div class="list_a" id="ih">
-                <a href="#"> <img src="images/a5pp.PNG"></a>
-                <span>846316</span>
-                <a href="#"> <h2>AIR JORDON 5</h2></a>
-                <span>Air Jordan 5 Low  </span>
-            </div>
-            <div class="list_a" id="ii">
-                <a href="#"> <img src="images/a6pp.PNG"></a>
-                <span>408452</span>
-                <a href="#"><h2>AIR JORDON 6</h2></a>
-                <span>Air Jordan 6 Maroon </span>
-            </div>
-            <div class="list_a" id="ij">
-                <a href="#"> <img src="images/a11pp.PNG"></a>
-                <span>384664</span>
-                <a href="#"><h2>AIR JORDON 11</h2></a>
-                <span>Air Jordan 11 Metallic  </span>
-            </div>
 
-        </div>
 
-    </div>-->
+</div>
+<div class="list_R">
+    <div class="list_a" id="if">
+        <a href="#"> <img src="images/aa1p.PNG" ></a>
+        <span>554724</span>
+        <a href="#"><h2>AIR JORDON 1</h2></a>
+        <span>Air Jordan 1 Mid  </span>
+    </div>
+    <div class="list_a" id="ig">
+        <a href="#"> <img src="images/a4p.PNG"></a>
+        <span>408452</span>
+        <a href="#"><h2>AIR JORDON 4</h2></a>
+        <span>Air Jordan 4 OG </span>
+    </div>
+    <div class="list_a" id="ih">
+        <a href="#"> <img src="images/a5pp.PNG"></a>
+        <span>846316</span>
+        <a href="#"> <h2>AIR JORDON 5</h2></a>
+        <span>Air Jordan 5 Low  </span>
+    </div>
+    <div class="list_a" id="ii">
+        <a href="#"> <img src="images/a6pp.PNG"></a>
+        <span>408452</span>
+        <a href="#"><h2>AIR JORDON 6</h2></a>
+        <span>Air Jordan 6 Maroon </span>
+    </div>
+    <div class="list_a" id="ij">
+        <a href="#"> <img src="images/a11pp.PNG"></a>
+        <span>384664</span>
+        <a href="#"><h2>AIR JORDON 11</h2></a>
+        <span>Air Jordan 11 Metallic  </span>
+    </div>
+
+</div>
+
+</div>-->
 
 
 
@@ -778,33 +847,33 @@
 //            '<p class="q">欢迎</p>';
     }
     /*document.getElementById('name').textContent=shoes[0].name;
-    document.getElementById('no').textContent=shoes[0].no;
-    document.getElementById('inform').textContent=shoes[0].inform;
+     document.getElementById('no').textContent=shoes[0].no;
+     document.getElementById('inform').textContent=shoes[0].inform;
 
-    document.getElementById('namea').textContent=shoes[1].name;
-    document.getElementById('noa').textContent=shoes[1].no;
-    document.getElementById('informa').textContent=shoes[1].inform;
+     document.getElementById('namea').textContent=shoes[1].name;
+     document.getElementById('noa').textContent=shoes[1].no;
+     document.getElementById('informa').textContent=shoes[1].inform;
 
-    document.getElementById('nameb').textContent=shoes[2].name;
-    document.getElementById('nob').textContent=shoes[2].no;
-    document.getElementById('informb').textContent=shoes[2].inform;
+     document.getElementById('nameb').textContent=shoes[2].name;
+     document.getElementById('nob').textContent=shoes[2].no;
+     document.getElementById('informb').textContent=shoes[2].inform;
 
-    document.getElementById('namec').textContent=shoes[3].name;
-    document.getElementById('noc').textContent=shoes[3].no;
-    document.getElementById('informc').textContent=shoes[3].inform;
+     document.getElementById('namec').textContent=shoes[3].name;
+     document.getElementById('noc').textContent=shoes[3].no;
+     document.getElementById('informc').textContent=shoes[3].inform;
 
-    document.getElementById('named').textContent=shoes[4].name;
-    document.getElementById('nod').textContent=shoes[4].no;
-    document.getElementById('informd').textContent=shoes[4].inform;
+     document.getElementById('named').textContent=shoes[4].name;
+     document.getElementById('nod').textContent=shoes[4].no;
+     document.getElementById('informd').textContent=shoes[4].inform;
 
-    document.getElementById('namee').textContent=shoes[5].name;
-    document.getElementById('noe').textContent=shoes[5].no;
-    document.getElementById('informe').textContent=shoes[5].inform;*/
+     document.getElementById('namee').textContent=shoes[5].name;
+     document.getElementById('noe').textContent=shoes[5].no;
+     document.getElementById('informe').textContent=shoes[5].inform;*/
     /*for (var i=0;i<shoes.length;i++){
-        document.getElementById('name_'+i).textContent=shoes[i].name;
-        document.getElementById('no_'+i).textContent=shoes[i].no;
-        document.getElementById('inform_'+i).textContent=shoes[i].inform;
-    }*/
+     document.getElementById('name_'+i).textContent=shoes[i].name;
+     document.getElementById('no_'+i).textContent=shoes[i].no;
+     document.getElementById('inform_'+i).textContent=shoes[i].inform;
+     }*/
 </script>
 <script>
 
